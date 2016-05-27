@@ -1,0 +1,18 @@
+/**
+ * Schema definition for testing Avro specific data serialization.
+ */
+@namespace("clara_durability.avro")
+protocol SampleProtocol {
+
+    record Temperature {
+
+        int temperature;
+
+        union{null, string} location;
+    }
+
+    record Cold {
+
+        int temperature;
+    }
+}
